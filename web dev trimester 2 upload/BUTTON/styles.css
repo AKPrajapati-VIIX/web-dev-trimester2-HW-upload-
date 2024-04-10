@@ -1,0 +1,40 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+#wrapper{
+    height:100vh;
+    width:100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Button-pink{
+    background-color: coral;
+    padding:0.8rem 2.3rem;
+    color:white;
+    font-size:100px;
+    box-shadow:7px 7px 9px 0px black;
+    position:relative;
+    z-index:1;
+}
+
+.Button-pink::before{
+    content:"";
+    background-color: black;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    transform:scaleX(0);
+    transform-origin:left;
+    transition:all 1s;
+    z-index:-1;
+}
+.Button-pink:hover::before{
+    transform:scale(1);
+}
